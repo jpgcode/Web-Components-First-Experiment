@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	    if ('registerElement' in document
+	      && 'createShadowRoot' in HTMLElement.prototype
+	      && 'import' in document.createElement('link')
+	      && 'content' in document.createElement('template')) {
+	      // We're using a browser with native WC support!
+	    } else {
+	      document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"><\/script>')
+	    }
+  	</script>
+  	<style type="text/css">
+		shape-anim::shadow .shape{
+			background: #000;
+			width: 100px;
+			height: 100px;
+		}
+  	</style>
+	<link rel="import" href="shape-anim/shape-anim.html">
+</head>
+<body>
+	<shape-anim color="red" shape="circle" anim="right">
+		<p>Hey!</p>
+	</shape-anim>
+</body>
+</html>
